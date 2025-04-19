@@ -1,4 +1,4 @@
-# SP-ASFDA
+# FedDGH
 # implementation for **FedDGH: Federated Domain-Generalized Hashing via Dynamic Parameter Masking
  
 ### Prerequisites:
