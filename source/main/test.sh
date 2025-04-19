@@ -41,9 +41,9 @@ function start_fed_task() {
         --target="$target" \
         --num_rounds=$num_rounds \
         --num_classes=$num_classes \
-        --eta=1 \
+        --eta=0.7 \
         --alfa=0.01 \
-        --beta=0.4 \
+        --beta=0.5 \
         --restore=0 \
         --code_length=64 2>&1 | tee -a "../ckps/${method_dir}/${dataset}/${log_prefix}.log"&
 
@@ -58,7 +58,7 @@ function start_fed_task() {
             --subdataset="${subdatasets[idx]}" \
             --client="$client_num" \
             --num_classes=$num_classes \
-            --eta=1 \
+            --eta=0.7 \
             --alfa=0.01 \
             --code_length=64 2>&1 | tee -a "../ckps/${method_dir}/${dataset}/${log_prefix}_nohup.log"&
         sleep 3
